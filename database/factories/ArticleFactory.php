@@ -13,10 +13,13 @@ class ArticleFactory extends Factory
 
     public function definition(): array
     {
+        // Genera un ID casuale per Picsum
+        $randomId = $this->faker->numberBetween(1, 500);
+
         return [
             'title' => $this->faker->sentence(),
             'content' => $this->faker->paragraphs(3, true),
-            'img' => $this->faker->imageUrl(640, 480, 'articles', true), // URL immagine casuale
+            'img' => "https://picsum.photos/id/{$randomId}/300/150",
             'user_id' => User::inRandomOrder()->first()->id ?? User::factory(),
             'category_id' => Category::inRandomOrder()->first()->id ?? Category::factory(),
         ];

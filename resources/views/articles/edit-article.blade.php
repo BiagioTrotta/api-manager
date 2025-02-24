@@ -28,6 +28,13 @@
                 </select>
             </div>
 
+            <!-- Campo per modificare l'immagine -->
+            <div class="form-group">
+                <label for="img">Image URL</label>
+                <input type="text" class="form-control" id="img" name="img" value="{{ $article->img }}" required>
+                <small class="form-text text-muted">Enter a URL for the image or leave it empty to use the default one.</small>
+            </div>
+
             <button type="submit" class="btn btn-success mt-3">Update Article</button>
         </form>
     </div>

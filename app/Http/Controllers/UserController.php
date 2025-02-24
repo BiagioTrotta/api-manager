@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return response()->json(User::select('id', 'name', 'email', 'created_at', 'updated_at')->get(), 200);
+        return response()->json(User::select('id', 'name', 'email', 'phone', 'gender', 'created_at', 'updated_at')->get(), 200);
     }
 
     /**
@@ -38,6 +38,8 @@ class UserController extends Controller
             'id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
+            'phone' => $user->phone,
+            'gender' => $user->gender,
             'created_at' => $user->created_at,
             'updated_at' => $user->updated_at
         ], 201);

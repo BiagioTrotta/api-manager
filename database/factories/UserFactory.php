@@ -16,6 +16,8 @@ class UserFactory extends Factory
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
             'password' => Hash::make('password'), // Password predefinita
+            'phone' => $this->faker->phoneNumber(), // Aggiungi un numero di telefono casuale
+            'gender' => $this->faker->randomElement(['male', 'female', 'other']), // Sesso casuale
         ];
     }
 }
