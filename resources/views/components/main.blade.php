@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body>
@@ -30,6 +31,7 @@
 
 
     <script src="https://kit.fontawesome.com/747222a0ae.js" crossorigin="anonymous"></script>
+    @livewireScripts
 </body>
 
 </html>

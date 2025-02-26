@@ -102,4 +102,19 @@ class PageController extends Controller
         $article->delete();
         return redirect()->route('homepage')->with('success', 'Article deleted successfully');
     }
+
+    public function userIndex() {
+        $title = 'Users Index';
+        return view('users.index', compact('title'));
+    }
+
+    public function articleIndex() {
+        $title = 'Articles Index';
+        return view('articles.index', compact('title'));
+    }
+
+    public function categoryIndex() {
+        $title = 'Categories Index';
+        return view('categories.index', compact('title'));
+    }
 }

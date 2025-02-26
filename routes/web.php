@@ -20,6 +20,11 @@ Route::get('/user/{user}/edit', [PageController::class, 'editUser'])->name('page
 Route::put('/user/{user}', [PageController::class, 'updateUser'])->name('page.updateUser');
 Route::delete('/user/{user}', [PageController::class, 'destroyUser'])->name('page.destroyUser');
 
+//Livewire Routers
+Route::get('/users', [PageController::class, 'userIndex'])->name('users.index');
+Route::get('/articles', [PageController::class, 'articleIndex'])->name('articles.index');
+Route::get('/categories', [PageController::class, 'categoryIndex'])->name('categories.index');
+
 
 // Category Routes
 Route::get('/category/{category}/edit', [PageController::class, 'editCategory'])->name('page.editCategory');
